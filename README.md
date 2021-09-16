@@ -1,18 +1,18 @@
 # Goals
 - To develop individualized prediction models for gastrostomy in ALS patients
 
-**Target Variables**
+**Target Variables**     
 - Time to dietary consistency change (ALSFRS_Q3_Swallowing score dropping to 2.0, among patients whose initial FVC is more than 50%)
 
 **Python scripts**  
 https://github.com/PROACT-team/Final-scripts
 
-**data files** 
+**data files**      
 https://drive.google.com/drive/u/0/folders/1Axu5zX-2oADEc2cxG-GbxA1I0rWkFrzc
 
 # Preparations  
 
-## Data source
+## Data source 
 
 PRO-ACT database (raw data)
 https://nctu.partners.org/proact  
@@ -22,16 +22,16 @@ https://www.dropbox.com/sh/3lmi5ii3sgyi7o3/AACeVLTGtSDXSKIaX6P7Hxj2a?dl=0
 (local) /Users/hong/Dropbox/ALSmaster/PROACT  
 
 ## Scripts   
-**1_preprocessing.py**
+**1_preprocessing.py**   
 Extracting features and target variables & Data imputation
 
-**2_feature_selection.py**  
+**2_feature_selection.py**    
 Stepwise selection & Checking multicollinearity
      
-**3_fitting_and_evaluation.py**     
+**3_fitting_and_evaluation.py**      
 Prediction & Testing
 
-**4_effect_of_delayed_gastrostomy.py** 
+**4_effect_of_delayed_gastrostomy.py**   
 to investigate the relationship between time-difference and survival
 time-diffenrence defined as _'Actual gastrostomy time' minus 'Predicted gastrostomy'_
 
