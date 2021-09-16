@@ -14,11 +14,11 @@ https://drive.google.com/drive/u/0/folders/1Axu5zX-2oADEc2cxG-GbxA1I0rWkFrzc
 
 ## Data source 
 
-PRO-ACT database (raw data)
+PRO-ACT database (raw data)   
 https://nctu.partners.org/proact  
 
-Preprocessed csv files
-https://www.dropbox.com/sh/3lmi5ii3sgyi7o3/AACeVLTGtSDXSKIaX6P7Hxj2a?dl=0
+Preprocessed csv files   
+https://www.dropbox.com/sh/3lmi5ii3sgyi7o3/AACeVLTGtSDXSKIaX6P7Hxj2a?dl=0  
 (local) /Users/hong/Dropbox/ALSmaster/PROACT  
 
 ## Scripts   
