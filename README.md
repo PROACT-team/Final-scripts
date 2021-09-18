@@ -72,4 +72,7 @@ models show C-index around 0.84
 
 - Group Stratification
 ![그림4](https://user-images.githubusercontent.com/78291206/133880998-375964b4-c582-4871-9f39-cf74854e0516.png)
+Prediction matches well with Kaplan Meier in Rapid and Intermediate group but not much in slow group
+
 ![image](https://user-images.githubusercontent.com/78291206/133881471-06ed8067-f25c-4790-9ebf-0460cedc1ed7.png)
+Thick colored lines are interquartile range between 25 to 75 % probability time to event. And the dots in the middle are the 50% probability times
