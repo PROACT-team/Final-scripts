@@ -41,26 +41,35 @@ Imputation using iterativeImputer in scikit-learn
 
 # Gastrostomy prediction
 
-Goal: build a model to predict the time to dietary consistency change
+**Goal** : 
+build a model to predict the time to dietary consistency change
 
-Features:    
-- Age(ordered categorical data by 5yrs), Gender, onset_site(Bulbar/Non-bulbar), onset_delta(months), diag_delta(months), diag_minus_onset(meta feature, months)
-- ALSFRS (total score, item scores), FVC, Creatinine, Weight
-- calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine
-- calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, points per month)  
-- ALSFRS bulbar dimension score did not include Q2_salivation because of the symptomatic treatments available           
+**Features** :    
+- Age(ordered categorical data by 5yrs), Gender, onset_site(Bulbar/Non-bulbar), onset_delta(months), diag_delta(months), diag_minus_onset(meta feature, months) 
+- ALSFRS (total score, item scores), FVC, Creatinine, Weight     
+- calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine     
+- calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
 - exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, onset_site)    
 
-Stepwise selection: 
+**Stepwise selection** : 
+- Age, onset_delta, mean_FVC, ALSFRS_total_slope, mean_Q1_Speech, mean_Q2_Salivation, mean_Q3_Swallowing, mean_Q7_Turning_in_Bed, slope_Q3_Swallowing, slope_Q6_Dressing_and_Hygiene, Creatinine_slope, weight_slope
+- Due to high multicollinearity, meta feature 'mean_Q1_2_3_mouth' was added and 'mean_Q1_Speech'/'mean_Q2_Salivation'/'mean_Q3_Swallowing' were removed
 
-Algorithm: Accelerated failure time(parametric), cox proportional hazard model(semi-parametric), random survival forests(machine-learning)
+**Algorithm** :          
+- Accelerated failure time (parametric)
+- Cox proportional hazard model (semi-parametric)
+- Random survival forests (machine-learning)
 
-Results:  
-Correlation plot between observed vs. predicted slope values    
-![scatter_plot_slope_obs_pred](/images/cor_lm_rf.png)     
+**Results** :       
+- Demonstrations; Printing prediction curve on test set
+![그림1](https://user-images.githubusercontent.com/78291206/133879890-4ac2c178-b60e-4212-a863-67676fdf6973.png) 
+     
+     
+- Evaluating model performance; C-index in Repeated 5-fold cross validation
+![image](https://user-images.githubusercontent.com/78291206/133880313-392f1e65-8574-4328-9966-d4c11d8cb4de.png)    
+models show C-index around 0.84
 
-Comparisons of model performance: MAE, RMSE, Rsquared
-![model_comparison](/images/model_comparisons.png)   
 
-found no significance in paired t-test w/ bonferroni correction  
-but there was a significant difference in Rsquared in raw p-value
+- Group Stratification
+![그림4](https://user-images.githubusercontent.com/78291206/133880998-375964b4-c582-4871-9f39-cf74854e0516.png)
+![image](https://user-images.githubusercontent.com/78291206/133881471-06ed8067-f25c-4790-9ebf-0460cedc1ed7.png)
