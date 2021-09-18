@@ -32,7 +32,7 @@ Stepwise selection & Checking multicollinearity
 Prediction & Testing
 
 **4_effect_of_delayed_gastrostomy.py**   
-to investigate the relationship between time-difference and survival
+to investigate the relationship between time-difference and survival       
 time-diffenrence defined as _'Actual gastrostomy time' minus 'Predicted gastrostomy'_
 
 # Imputation
