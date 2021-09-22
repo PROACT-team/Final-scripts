@@ -53,7 +53,7 @@ build a model to predict the time to dietary consistency change
 
 **Stepwise selection** : 
 - Age, onset_delta, mean_FVC, ALSFRS_total_slope, mean_Q1_Speech, mean_Q2_Salivation, mean_Q3_Swallowing, mean_Q7_Turning_in_Bed, slope_Q3_Swallowing, slope_Q6_Dressing_and_Hygiene, Creatinine_slope, weight_slope
-- Due to high multicollinearity, meta feature 'mean_Q1_2_3_mouth' was added and 'mean_Q1_Speech'/'mean_Q2_Salivation'/'mean_Q3_Swallowing' were removed
+- Due to high multicollinearity, meta feature 'mean_Q1_2_3_mouth' was added and 'mean_Q1_Speech'/'mean_Q2_Salivation'/'mean_Q3_Swallowing', 'slope_Q6_Dressing_and_Hygiene' were removed. 
 
 **Algorithm** :          
 - Accelerated failure time (parametric)
