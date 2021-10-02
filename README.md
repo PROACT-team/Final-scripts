@@ -63,10 +63,10 @@ build a model to predict the time to dietary consistency change
 <img src="https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png" width="60%">
 
 - Missing data nullity correlation heatmap
-- <img src="https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png" width="60%">
+<img src="https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png" width="60%">
 
 - Missing data dendrogram showing hierarchical nullity relationship
-- <img src="https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png" width="60%">
+<img src="https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png" width="60%">
 
 - Imputation using iterativeImputer in scikit-learn
 
