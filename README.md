@@ -47,26 +47,26 @@ build a model to predict the time to dietary consistency change
 **Select features according to previous studies** :    
 - Age(ordered categorical data by 5yrs), Gender, onset_site(Bulbar/Non-bulbar), onset_delta(months), diag_delta(months), diag_minus_onset(months) 
 - ALSFRS (total score, item scores), FVC, Creatinine, Weight
-- Reference https://www.tandfonline.com/doi/abs/10.3109/17482960802566824?journalCode=iafd19, https://www.nature.com/articles/nbt.3051
+- References https://www.tandfonline.com/doi/abs/10.3109/17482960802566824?journalCode=iafd19, https://www.nature.com/articles/nbt.3051
 - calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine     
 - calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
 - exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, onset_site)    
 
 **Imputation**
 - Missing data proportion circle graph
-![Missing data proportion](https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png)
+<img src="https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png" width="60%">
 
 - Missing data proportion barplot
-![Missing data proportion barplot](https://user-images.githubusercontent.com/79128639/135713528-79625000-c97e-4445-ad92-4350de0dd35f.png)
+<img src="https://user-images.githubusercontent.com/79128639/135713528-79625000-c97e-4445-ad92-4350de0dd35f.png" width="60%">
 
 - Missing data nullity matrix
-![Missing data nullity matrix](https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png)
+<img src="https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png" width="60%">
 
 - Missing data nullity correlation heatmap
-![Missing data nullity correlation heatmap](https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png)
+- <img src="https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png" width="60%">
 
 - Missing data dendrogram showing hierarchical nullity relationship
-![Missing data dendrogram](https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png)
+- <img src="https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png" width="60%">
 
 - Imputation using iterativeImputer in scikit-learn
 
