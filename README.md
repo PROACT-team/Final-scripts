@@ -44,16 +44,36 @@ Imputation using iterativeImputer in scikit-learn
 **Goal** : 
 build a model to predict the time to dietary consistency change
 
-**Features** :    
-- Age(ordered categorical data by 5yrs), Gender, onset_site(Bulbar/Non-bulbar), onset_delta(months), diag_delta(months), diag_minus_onset(meta feature, months) 
-- ALSFRS (total score, item scores), FVC, Creatinine, Weight     
+**Select features according to previous studies** :    
+- Age(ordered categorical data by 5yrs), Gender, onset_site(Bulbar/Non-bulbar), onset_delta(months), diag_delta(months), diag_minus_onset(months) 
+- ALSFRS (total score, item scores), FVC, Creatinine, Weight
+- Reference https://www.tandfonline.com/doi/abs/10.3109/17482960802566824?journalCode=iafd19, https://www.nature.com/articles/nbt.3051
 - calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine     
 - calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
 - exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, onset_site)    
 
-**Stepwise selection** : 
-- Age, onset_delta, mean_FVC, ALSFRS_total_slope, mean_Q1_Speech, mean_Q2_Salivation, mean_Q3_Swallowing, mean_Q7_Turning_in_Bed, slope_Q3_Swallowing, slope_Q6_Dressing_and_Hygiene, Creatinine_slope, weight_slope
-- Due to high multicollinearity, meta feature 'mean_Q1_2_3_mouth' was added and 'mean_Q1_Speech'/'mean_Q2_Salivation'/'mean_Q3_Swallowing', 'slope_Q6_Dressing_and_Hygiene' were removed. 
+**Imputation**
+- Missing data proportion circle graph
+![Missing data proportion](https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png)
+
+- Missing data proportion barplot
+![Missing data proportion barplot](https://user-images.githubusercontent.com/79128639/135713528-79625000-c97e-4445-ad92-4350de0dd35f.png)
+
+- Missing data nullity matrix
+![Missing data nullity matrix](https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png)
+
+- Missing data nullity correlation heatmap
+![Missing data nullity correlation heatmap](https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png)
+
+- Missing data dendrogram showing hierarchical nullity relationship
+![Missing data dendrogram](https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png)
+
+- Imputation using iterativeImputer in scikit-learn
+
+**Stepwise forward selection & Create meta-feature** : 
+- Age, onset_delta, mean_FVC, ALSFRS_total_slope, mean_Q1_Speech, mean_Q2_Salivation, mean_Q3_Swallowing, mean_Q7_Turning_in_Bed, slope_Q3_Swallowing, slope_Q6_Dressing_and_Hygiene, Creatinine_slope, weight_slope was selected through Stepwise forward selection
+- Due to high multicollinearity, meta feature 'mean_Q1_2_3_mouth' was added and 'mean_Q1_Speech'/'mean_Q2_Salivation'/'mean_Q3_Swallowing' were removed. 
+- Due to high multicollinearity of ALSFRS_total_slope/slope_Q6_Dressing_and_Hygiene, 'slope_Q6_Dressing_and_Hygiene' was removed.
 
 **Algorithm** :          
 - Accelerated failure time (parametric)
