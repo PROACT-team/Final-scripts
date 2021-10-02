@@ -52,7 +52,7 @@ build a model to predict the time to dietary consistency change
 - calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
 - exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, onset_site)    
 
-**Imputation**
+**Imputation** :
 - Missing data proportion circle graph
 <img src="https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png" width="60%">
 
