@@ -96,12 +96,12 @@ Thick colored lines are interquartile range between 25 to 75 % probability time 
 
 <img src="https://user-images.githubusercontent.com/79128639/135748533-36c2b299-0c6e-4286-b844-a97bdcdbb367.png" width="60%">  
 Data with bigger time difference, with its actual gastrostomy more delayed from predicted gastrostomy, tends to have worse survival    
-
-
+     
+     
 <img src="https://user-images.githubusercontent.com/79128639/135748495-9a1eae6f-9c8f-4940-8561-21985fe05758.png" width="60%">
 Based on time difference distribution, patients were categorized into Early/Medium/Late classes, by 25% and 75% percentile criterion   
-
-
+     
+     
 <img src="https://user-images.githubusercontent.com/79128639/135748560-fe7ade4c-371b-4023-8517-3a968dfc0612.png" width="60%">
 Early group showed better survival than the Late group. logrank test result (p-value=0.001)    
 Also the plot above suggests a time-dependent effect of time difference    
