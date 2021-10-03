@@ -94,12 +94,12 @@ Thick colored lines are interquartile range between 25 to 75 % probability time 
 - Patient data with status = 1(occurred) on the actual gastrostomy were only used.   
 - Patients whose survival report was cut earlier than the actual gastrostomy or the predicted gastrostomy were excluded.     
 
-<img src="https://user-images.githubusercontent.com/78291206/135748156-f4b3516c-1701-45b3-895e-a9c4bae897a7.PNG" width="60%">  
+<img src="https://user-images.githubusercontent.com/78291206/135748241-e7b7001e-cfeb-41ed-830b-f5972d9d1019.PNG" width="60%">  
 Data with bigger time difference, with its actual gastrostomy more delayed from predicted gastrostomy, tends to have worse survival    
 
-<img src="https://user-images.githubusercontent.com/78291206/135748174-6839efb6-2c20-4537-8cd5-af7ecddab385.PNG" width="60%">
+<img src="https://user-images.githubusercontent.com/78291206/135748308-a5f5a89a-74e3-406c-a5f4-18a7d04f45cc.PNG" width="60%">
 Based on time difference distribution, patients were categorized into Early/Medium/Late classes, by 25% and 75% percentile criterion   
 
-<img src="https://user-images.githubusercontent.com/78291206/135748184-e689b546-4cbb-4537-95f0-8f2e13548b5c.PNG" width="60%">
+<img src="https://user-images.githubusercontent.com/78291206/135748321-f47dbf8a-a7a0-42d1-8848-bbb21f9e848b.PNG" width="60%">
 Early group showed better survival than the Late group. logrank test result (p-value=0.001)    
 Also the plot above suggests a time-dependent effect of time difference    
