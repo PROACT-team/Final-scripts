@@ -50,23 +50,18 @@ build a model to predict the time to dietary consistency change
 - References https://www.tandfonline.com/doi/abs/10.3109/17482960802566824?journalCode=iafd19, https://www.nature.com/articles/nbt.3051
 - calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine     
 - calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
-- exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, onset_site)    
+- exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, diag_minus_onset, onset_site)
+- exclude cases with missing values in mean_ALSFRS_q beacause all 10 sub scores had same large proportion of missing values 
 
 **Imputation** :
-- Missing data proportion circle graph
-<img src="https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png" width="60%">
-
-- Missing data proportion barplot
-<img src="https://user-images.githubusercontent.com/79128639/135713528-79625000-c97e-4445-ad92-4350de0dd35f.png" width="60%">
-
 - Missing data nullity matrix
 <img src="https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png" width="60%">
 
-- Missing data nullity correlation heatmap
-<img src="https://user-images.githubusercontent.com/79128639/135713572-7183f3f3-dfc2-4595-9b38-0a832cbbabc6.png" width="60%">
+- Missing data nullity matrix after excluding cases with missing values in onset_delta, mean_ALSFRS_Q
+<img src="https://user-images.githubusercontent.com/79128639/135747347-39fef080-14d1-43df-9a00-a46ef2b6401d.PNG" width="60%">
 
-- Missing data dendrogram showing hierarchical nullity relationship
-<img src="https://user-images.githubusercontent.com/79128639/135713589-7d870530-6c0a-4760-b187-1b2eefe3acc9.png" width="60%">
+- Missing data proportion circle graph
+<img src="https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png" width="60%">
 
 - Imputation using iterativeImputer in scikit-learn
 
@@ -82,17 +77,17 @@ build a model to predict the time to dietary consistency change
 
 **Results** :       
 - Demonstrations; Printing prediction curve on test set
-![그림1](https://user-images.githubusercontent.com/78291206/133879890-4ac2c178-b60e-4212-a863-67676fdf6973.png) 
+![image](https://user-images.githubusercontent.com/79128639/135747484-7d0b3823-01d7-4d01-9c23-c26e01660337.png)
      
      
 - Evaluating model performance; C-index in Repeated 5-fold cross validation
-![image](https://user-images.githubusercontent.com/78291206/133880313-392f1e65-8574-4328-9966-d4c11d8cb4de.png)    
+![C-index](https://user-images.githubusercontent.com/79128639/135747430-93d02c66-7ffe-4feb-8def-ffd85ec411fe.PNG)
 models show C-index around 0.84
 
 
 - Group Stratification
-![그림4](https://user-images.githubusercontent.com/78291206/133880998-375964b4-c582-4871-9f39-cf74854e0516.png)
+![group stratification](https://user-images.githubusercontent.com/79128639/135747503-1c9f4a98-477b-4893-8d46-603f7479a390.PNG)
 Prediction matches well with Kaplan Meier in Rapid and Intermediate group but not much in slow group
 
-![image](https://user-images.githubusercontent.com/78291206/133881471-06ed8067-f25c-4790-9ebf-0460cedc1ed7.png)
+![group stratification2](https://user-images.githubusercontent.com/79128639/135747505-73614925-48de-4fbe-a23f-c1ee73470925.PNG)
 Thick colored lines are interquartile range between 25 to 75 % probability time to event. And the dots in the middle are the 50% probability times
