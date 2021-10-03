@@ -74,8 +74,7 @@ build a model to predict the time to dietary consistency change
 
 **Results** :       
 - Demonstrations; Printing prediction curve on test set
-![image](https://user-images.githubusercontent.com/79128639/135747484-7d0b3823-01d7-4d01-9c23-c26e01660337.png)
-     
+![image](https://user-images.githubusercontent.com/79128639/135747819-7e608aac-27b5-4425-a372-32389f0b5bb6.png)     
      
 - Evaluating model performance; C-index in Repeated 5-fold cross validation
 ![C-index](https://user-images.githubusercontent.com/79128639/135747430-93d02c66-7ffe-4feb-8def-ffd85ec411fe.PNG)
