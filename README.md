@@ -87,3 +87,20 @@ Prediction matches well with Kaplan Meier in Rapid and Intermediate group but no
 
 ![group stratification2](https://user-images.githubusercontent.com/79128639/135747505-73614925-48de-4fbe-a23f-c1ee73470925.PNG)
 Thick colored lines are interquartile range between 25 to 75 % probability time to event. And the dots in the middle are the 50% probability times
+
+# Extra analysis; Survival impact of delayed gastrostomy
+- Using the cox model made, the predicted median time to gastrostomy('_Predicted gastrostomy_') for individual patients was obtained. Next, a new variable called 'Time difference' was defined by subtracting this value from the time of actual gastrostomy.
+- Time-diffenrence defined as _'Actual gastrostomy time' minus 'Predicted gastrostomy'_
+- Patient data with status = 1(occurred) on the actual gastrostomy were only used. 
+- Patients whose survival report was cut earlier than the actual gastrostomy or the predicted gastrostomy were excluded.
+
+(scatter plot image)
+Data with bigger time difference, with its actual gastrostomy more delayed from predicted gastrostomy, tends to have worse survival
+
+(time difference 분포 hisplot)
+Based on time difference distribution, patients were categorized into Early/Medium/Late classes, by 25% and 75% percentile criterion
+
+(kaplan)
+Early group showed better survival than the Late group. logrank test result (p-value=0.001)
+Also the plot above suggests a time-dependent effect of time difference
+- 
