@@ -35,10 +35,6 @@ Prediction & Testing
 to investigate the relationship between time-difference and survival       
 time-diffenrence defined as _'Actual gastrostomy time' minus 'Predicted gastrostomy'_
 
-# Imputation
-## Missing data: proportion and pattern  
-Imputation using iterativeImputer in scikit-learn
-
 # Gastrostomy prediction
 
 **Goal** : 
@@ -55,10 +51,11 @@ build a model to predict the time to dietary consistency change
 
 **Imputation** :
 - Missing data nullity matrix
-<img src="https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png" width="60%">
+<img src="https://user-images.githubusercontent.com/79128639/135747347-39fef080-14d1-43df-9a00-a46ef2b6401d.PNG" width="60%">
+
 
 - Missing data nullity matrix after excluding cases with missing values in onset_delta, mean_ALSFRS_Q
-<img src="https://user-images.githubusercontent.com/79128639/135747347-39fef080-14d1-43df-9a00-a46ef2b6401d.PNG" width="60%">
+<img src="https://user-images.githubusercontent.com/79128639/135713545-8b813052-d727-4eec-8f13-c73ee36f45b9.png" width="60%">
 
 - Missing data proportion circle graph
 <img src="https://user-images.githubusercontent.com/79128639/135709837-3121e213-d58c-4f83-a766-ac52259289cc.png" width="60%">
