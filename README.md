@@ -83,7 +83,7 @@ models show C-index around 0.84
 
 
 - Group Stratification
-![group stratification](https://user-images.githubusercontent.com/79128639/135747503-1c9f4a98-477b-4893-8d46-603f7479a390.PNG)
+![image](https://user-images.githubusercontent.com/79128639/135747687-348dc3a2-da04-4102-8a55-4016c0e0ca18.png)
 Prediction matches well with Kaplan Meier in Rapid and Intermediate group but not much in slow group
 
 ![group stratification2](https://user-images.githubusercontent.com/79128639/135747505-73614925-48de-4fbe-a23f-c1ee73470925.PNG)
