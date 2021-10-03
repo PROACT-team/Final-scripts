@@ -46,7 +46,7 @@ build a model to predict the time to dietary consistency change
 - References https://www.tandfonline.com/doi/abs/10.3109/17482960802566824?journalCode=iafd19, https://www.nature.com/articles/nbt.3051
 - calculate mean values over the first 3 months for ALSFRS, FVC, Creatinine     
 - calculate slope values over the first 3 months for the time-resolved features (ALSFRS/FVC/Creatinine/Weight, per month)            
-- exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, diag_minus_onset, onset_site)
+- exclude cases with missing values in onset_delta because of a large proportion of missing values (same cases with missing values in diag_delta, diag_minus_onset, 99% similar cases in onset_site)
 - exclude cases with missing values in mean_ALSFRS_q beacause all 10 sub scores had same large proportion of missing values 
 
 **Imputation** :
